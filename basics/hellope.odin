@@ -6,4 +6,7 @@ main :: proc() {
     variables()
     loops_result := loops(21)
     if_statments(loops_result)
+
+    cat := structs()
+    fmt.println(cat)
 }
