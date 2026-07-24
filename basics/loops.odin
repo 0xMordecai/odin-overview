@@ -6,8 +6,8 @@ loops :: proc(n: int) -> int {
 	res := 0
 
 	for i in 0..<n{
-		fmt.println(1)
-		res += 1
+		fmt.println(i)
+		res += i
 	}
 
 	return res
