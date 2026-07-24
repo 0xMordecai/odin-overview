@@ -1,4 +1,4 @@
-package  main
+package  basics
 import "core:fmt"
 
 main :: proc() {

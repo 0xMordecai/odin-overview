@@ -1,5 +1,4 @@
-package main
-
+package basics
 import "core:fmt"
 
 variables :: proc(){
