@@ -1,10 +1,11 @@
 package main
+import win32 "core:sys/windows"
 
-import "core:fmt"
-import "core:os"
+main :: proc(){
+	set_utf8_terminal()
+}
 
-main :: proc() {
-	// os.args is a []string
-	fmt.println(os.args[0])	// executable name
-	fmt.println(os.args[1:])	// the rest of the arguments
+_set_utf_terminal :: proc(){
+	win32.SetConsoleOutputCP(.UTF8)
+	win32.SetConsoleCP(.UTF8)
 }
