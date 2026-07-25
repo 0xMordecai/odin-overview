@@ -9,4 +9,7 @@ main :: proc() {
 
     cat := structs()
     fmt.println(cat)
+
+    pointers(&cat)
+
 }
