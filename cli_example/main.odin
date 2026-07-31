@@ -1,22 +1,15 @@
 package main
 import "core:fmt"
 import "core:os"
-import win32 "core:sys/windows"
 
-get_password :: proc(allocator := context.allocator) -> string {
-
-	fmt.print("Enter password: ")
-
-	buf := make([dynamic]byte, allocator)
-	in_stream := os.to_stream(os.stdin)
-
-	return ""
-}
 main :: proc(){
-	// set_utf8_terminal()
-}
+	arguments := os.args[1:]
+	fmt.printf("%v\n", arguments)
 
-// _set_utf_terminal :: proc(){
-// 	win32.SetConsoleOutputCP(.UTF8)
-// 	win32.SetConsoleCP(.UTF8)
-// }
+	if len(arguments) != 2{
+		fmt.printf("Usage: grep <query> <file_path>\n")
+		os.exit(1)
+	}
+	query := arguments[0]
+	file_path := arguments[1]
+}
